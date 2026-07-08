@@ -1,0 +1,38 @@
+server:
+  port: 2333
+  address: 0.0.0.0
+
+lavalink:
+  plugins:
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.13.5"
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.0"
+
+  server:
+    password: "youshallnotpass"
+
+    sources:
+      youtube: false
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
+      local: false
+
+plugins:
+  youtube:
+    enabled: true
+    clients:
+      - MUSIC
+      - WEB
+      - ANDROID
+
+  lavasrc:
+    providers:
+      - "spotify:%ISRC%"
+      - "ytsearch:%QUERY%"
+
+    spotify:
+      clientId: "ISI_CLIENT_ID"
+      clientSecret: "ISI_CLIENT_SECRET"
+      countryCode: "ID"
