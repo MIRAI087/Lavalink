@@ -28,5 +28,5 @@ plugins:
       - ANDROID
 
   lavasrc:
-  providers:
-    - "ytsearch:%QUERY%"
+    providers:
+      - "ytsearch:%QUERY%"
